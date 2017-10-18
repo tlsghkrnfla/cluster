@@ -1,0 +1,30 @@
+
+find in page table
+//void *kernel_address;
+//struct mm_struct *mm = current->mm;
+//pgd = pgd_offset(mm, address);
+//pud = pud_offset(pgd, address);
+//pmd = pmd_offset(pud, address);  
+//pte = pte_offset_map(pmd, address);  
+//page = pte_page(*pte);
+
+work queue
+//create_workqueue
+//create_singlethread_workqueue
+//DECLARE_WORK
+
+	void zerocopy_func(void *arg)
+	//struct zerocopy_data *zcopy_data = container_of(work, struct zerocopy_data, zcopy_work);
+	//struct zerocopy_data *zcopy_data = (struct zerocopy_data *)arg;
+
+		//INIT_WORK(&zcopy_data.zcopy_work, zerocopy_function);
+		//INIT_DELAYED_WORK(&zcopy_data.zcopy_work, zerocopy_function);
+		//schedule_work(&zcopy_data.zcopy_work);
+		// for_each_online_cpu(cpu)
+		//zerocopy_ts = kthread_create(&zerocopy_function, (void *)&zcopy_data, "kthread_zerocopy");
+		//zcopy_data.task = zerocopy_ts;
+//kthreadd
+		//kthread_bind(ts, smp_processor_id()+1);
+		//wake_up_process(zerocopy_ts);
+
+
